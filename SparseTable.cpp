@@ -21,8 +21,7 @@ struct RMQ {
     j = 1;
     k = 1;
     do {
-      for (i = 0; i < n; ++i) {
-        if (i + k >= n) break;
+      for (i = 0; i + k < n; ++i) {
         if (v[A[i][j - 1]] < v[A[i + k][j - 1]]) {
           A[i][j] = A[i][j - 1];
         } else {
