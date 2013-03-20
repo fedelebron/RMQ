@@ -1,0 +1,4 @@
+These are a few implementations of range minimum query algorithms in C++.
+
+Trivial.cpp is what it sounds like. O(1) preprocessing, O(n) query.
+SparseTable.cpp uses dynamic programming to build a table T where T[i][j] = arg min{v[k] | i <= k < i + 2^j}, where v is the input array. O(n log n) preprocessing, O(1) query.
