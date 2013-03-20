@@ -6,7 +6,7 @@ using namespace std;
 typedef vector<int> vint;
 
 int ceil_log2(int x) {
-  return 32 - __builtin_clz(x);
+  return 32 - __builtin_clz(x - 1);
 }
 
 struct RMQ {
@@ -46,7 +46,7 @@ struct RMQ {
 int main() {
   int n;
   while (cin >> n) {
-    vector<int> v(n);
+    vint v(n);
     int i, j;
     for (i = 0; i < n; ++i) {
       cin >> v[i];
